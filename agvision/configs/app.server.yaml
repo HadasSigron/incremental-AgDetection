@@ -1,0 +1,7 @@
+app:
+  mode: server
+  device: auto
+  artifacts_root: runs/
+server:
+  url: http://localhost:8000
+  auth: token

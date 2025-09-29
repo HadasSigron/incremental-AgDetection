@@ -1,0 +1,1 @@
+"""VOC detection adapter (placeholder)."""

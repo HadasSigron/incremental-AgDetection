@@ -1,0 +1,1 @@
+"""/api/v1/artifacts endpoints (placeholder)."""

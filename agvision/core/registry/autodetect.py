@@ -1,0 +1,1 @@
+"""Auto-detect model format/architecture using filename + registry (placeholder)."""

@@ -1,0 +1,29 @@
+# configs/benchmarks/segmentation/coco8-seg-masks.yaml
+name: coco8-seg-masks
+task: segmentation
+domain: segmentation
+
+dataset:
+  kind: masks_segmentation
+  root: data/benchmarks/segmentation/coco8-seg-masks   
+  img_dir: images                                      
+  mask_dir: masks
+  classes: [background]
+  transforms:
+    resize: [640, 640]
+
+model:
+  format: onnx
+  path: models/weights/yolov8n-seg.onnx
+  input_size: [512, 512] 
+  conf_threshold: 0.25
+  iou_threshold: 0.5
+
+eval:
+  batch_size: 2
+  num_workers: 2
+  device: cpu
+  metrics: [mean_accuracy, pixel_accuracy]
+
+paths:
+  runs_root: runs

@@ -1,0 +1,17 @@
+# Minimal benchmark configuration (no model here).
+# Purpose: Object detection on PlantDoc (COCO-style).
+name: PlantDoc-Det
+task: detection
+domain: plant_disease
+
+dataset:
+  kind: coco_detection
+  root: ./data/benchmarks/plantdoc_det
+  img_dir: images
+  ann_file: annotations/instances_test.json  # COCO JSON
+
+eval:
+  metrics: [map50, map5095]  # AP@0.5 and AP@[.5:.95]
+summary: |
+  COCO detection benchmark on PlantDoc field imagery. Ensure paths point to the
+  test/eval split JSON and corresponding images folder.

@@ -1,0 +1,1 @@
+"""QThreadPool wrapper (placeholder)."""

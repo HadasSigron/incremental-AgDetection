@@ -1,0 +1,15 @@
+[build-system]
+requires = ["setuptools>=64", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "agvision"
+version = "0.1.0"
+requires-python = ">=3.10"
+description = "AgVision core + UI"
+readme = "README.md"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["agvision*"]
+exclude = ["agvision/tests*", "agvision/runs*", "agvision/data*", "agvision/configs*", "agvision/server*"]

@@ -1,0 +1,1 @@
+"""Model registry access layer (SQLite) (placeholder)."""

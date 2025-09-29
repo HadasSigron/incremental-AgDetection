@@ -1,0 +1,1 @@
+"""YOLO detection adapter (placeholder)."""

@@ -1,0 +1,31 @@
+# configs/benchmarks/plantdoc_cls.yaml
+
+task: classification              # <-- REQUIRED at top-level
+domain: weeds                     # (אם AppConfig דורש גם domain ברמה העליונה)
+
+benchmark:
+  id: "plantdoc_cls"
+  name: "PlantDoc-Classification"
+  task: "classification"          # מותר להשאיר כפילות, או להסיר אם לא נדרש
+  domain: "weeds"
+
+dataset:
+  kind: "classification_folder"
+  root: "data/benchmarks/PlantDoc-Dataset"
+  train_dir: "train"
+  val_dir: "val"
+  extensions: [".jpg", ".jpeg", ".png"]
+
+model:
+  format: "onnx"
+  path: "models/weights/plantdoc_cls.onnx"
+  imgsz: 224
+  device: "cpu"
+
+eval:
+  batch_size: 16
+  average: "macro"
+  metrics: ["accuracy", "precision", "recall", "f1"]
+
+outputs:
+  root_dir: "runs"

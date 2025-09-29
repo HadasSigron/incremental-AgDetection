@@ -1,0 +1,19 @@
+# Minimal benchmark configuration (no model here).
+# Purpose: Segmentation of disease regions (PNG masks).
+name: PlantSeg
+task: segmentation
+domain: plant_disease
+
+dataset:
+  kind: masks_segmentation
+  root: ./data/benchmarks/plantseg
+  img_dir: images
+  mask_dir: masks
+  input_size: 512
+
+eval:
+  metrics: [miou, dice]
+  params:
+    ignore_index: 255
+summary: |
+  Pixel-level disease region segmentation. PNG masks aligned to images.

@@ -1,0 +1,20 @@
+# Minimal benchmark configuration (no model here).
+# Purpose: Multi-label apple leaf disease classification (FGVC8/Kaggle).
+name: PlantPathology2021-ML
+task: classification
+domain: plant_disease
+
+dataset:
+  kind: classification_folder
+  root: ./data/benchmarks/plantpathology2021_cls
+  split: test
+  input_size: 224
+
+eval:
+  metrics: []  # official uses Mean F1 for multi-label; keep defaults unless supported
+  params:
+    multi_label: true  # hint for downstream pipeline if supported
+summary: |
+  FGVC8 (Plant Pathology 2021) multi-label classification. If the current
+  pipeline does not support multi-label, use a compatible runner/adapter or
+  curate a single-label subset for initial pilots.

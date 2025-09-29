@@ -1,0 +1,7 @@
+app:
+  mode: desktop
+  device: auto
+  artifacts_root: runs/
+ui:
+  metrics_view_default: current_benchmark
+  resource_sampling_ms: 500

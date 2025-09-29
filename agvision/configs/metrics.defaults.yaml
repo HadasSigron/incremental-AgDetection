@@ -1,0 +1,6 @@
+classification:
+  columns: ["accuracy", "f1", "precision", "recall", "latency"]
+detection:
+  columns: ["map@0.5", "map@0.5:0.95", "precision", "recall", "latency"]
+segmentation:
+  columns: ["miou", "dice", "precision", "recall", "latency"]

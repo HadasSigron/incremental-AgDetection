@@ -1,0 +1,17 @@
+# Minimal benchmark configuration (no model here).
+# Purpose: Object detection for tomato leaf diseases (YOLO-style).
+name: TomatoLeaf-Det
+task: detection
+domain: plant_disease
+
+dataset:
+  kind: yolo_detection
+  root: ./data/benchmarks/tomato_leaf_yolo
+  img_dir: images                 # typical YOLO structure
+  ann_file: data.yaml             # YOLO dataset yaml describing train/val/test
+
+eval:
+  metrics: [map50]  # dataset commonly reports AP@0.5
+summary: |
+  YOLO-style tomato leaf disease detection. If using labels/ directory with txt
+  annotations, make sure the adapter reads from data.yaml and resolves paths.

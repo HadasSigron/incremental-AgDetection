@@ -1,0 +1,1 @@
+"""timm-based classifier wrapper (placeholder)."""

@@ -1,0 +1,16 @@
+# Minimal benchmark configuration (no model here).
+# Purpose: Image classification on PlantDoc field images (CC BY 4.0).
+name: PlantDoc-Cls
+task: classification
+domain: plant_disease
+
+dataset:
+  kind: classification_folder
+  root: ./data/benchmarks/plantdoc_cls
+  split: test
+  input_size: 224
+
+eval:
+  metrics: []  # defaults -> ["accuracy","macro_f1"]
+summary: |
+  PlantDoc classification using in-the-wild field images. Expect real-world noise.

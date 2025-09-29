@@ -1,0 +1,1 @@
+"""Populate registry placeholder."""

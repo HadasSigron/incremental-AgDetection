@@ -1,0 +1,18 @@
+# Minimal benchmark configuration (no model here).
+# Purpose: Apple leaf disease classification (FGVC7/Kaggle).
+name: PlantPathology2020-Cls
+task: classification
+domain: plant_disease
+
+dataset:
+  kind: classification_folder
+  root: ./data/benchmarks/plantpathology2020_cls
+  split: test
+  input_size: 224
+
+eval:
+  metrics: []  # benchmark uses ROC-AUC officially; keep defaults unless implemented
+summary: |
+  FGVC7 (Plant Pathology 2020). Official evaluation uses mean ROC-AUC; here we
+  keep task defaults unless ROC-AUC is implemented in the metrics module.
+  You may need to convert the original CSV format into an ImageFolder layout.

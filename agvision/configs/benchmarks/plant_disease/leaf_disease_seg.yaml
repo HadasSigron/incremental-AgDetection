@@ -1,0 +1,18 @@
+# Minimal benchmark configuration (no model here).
+# Purpose: Segmentation of leaf diseases (Kaggle dataset; PNG masks).
+name: LeafDisease-Seg
+task: segmentation
+domain: plant_disease
+
+dataset:
+  kind: masks_segmentation
+  root: ./data/benchmarks/leaf_disease_seg
+  img_dir: images
+  mask_dir: masks
+  input_size: 512
+
+eval:
+  metrics: [miou, dice]
+summary: |
+  Leaf disease segmentation with per-pixel masks. Ensure mask filenames align
+  with image filenames (1:1 mapping).

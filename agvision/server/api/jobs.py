@@ -1,0 +1,1 @@
+"""/api/v1/jobs endpoints (placeholder)."""

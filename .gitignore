@@ -1,0 +1,100 @@
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Packaging / build
+.Python
+build/
+dist/
+downloads/
+eggs/
+.eggs/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+*.egg
+MANIFEST
+
+# Virtual envs (venv/poetry/pyenv/etc)
+.venv/
+venv/
+env/
+ENV/
+.python-version
+__pypackages__/
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Tests & coverage
+.pytest_cache/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+htmlcov/
+.hypothesis/
+
+# Type checkers / linters
+.mypy_cache/
+.pytype/
+.pyre/
+.ruff_cache/
+.pylint.d/
+
+# Notebooks
+.ipynb_checkpoints
+.jupyter/
+
+# Framework odds
+instance/
+.webassets-cache
+
+# PyCharm / JetBrains
+.idea/
+
+# VS Code
+.vscode/
+
+# Logs & local data
+logs/
+*.log
+*.sqlite3
+*.db
+db.sqlite3
+
+# OS cruft
+.DS_Store
+Thumbs.db
+
+# Env files
+.env
+.env.*
+*.env
+
+# models / weights
+.models/
+*.pt
+*.pth
+*.onnx
+*.h5
+*.hdf5
+
+# data
+.datasets/
+*.zip
+
+# runs / outputs / logs
+runs/
+results.jsonl
+
+agvision/data/
+!agvision/data/.gitkeep

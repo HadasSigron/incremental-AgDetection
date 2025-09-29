@@ -1,0 +1,18 @@
+# Minimal benchmark configuration (no model here).
+# Purpose: Image classification on PlantVillage (Mendeley). CC0 dataset.
+name: PlantVillage-Cls
+task: classification
+domain: plant_disease
+
+dataset:
+  kind: classification_folder        # ImageFolder-like: class-per-folder
+  root: ./data/benchmarks/plantvillage_mendeley_cls
+  split: test
+  input_size: 224
+
+# Leave metrics empty to use task defaults: ["accuracy","macro_f1"]
+eval:
+  metrics: []
+summary: |
+  PlantVillage classification (38 classes). Images organized as class-per-folder.
+  Note: Original releases may need reorganization into ImageFolder layout.
